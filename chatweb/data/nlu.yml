@@ -1,0 +1,133 @@
+version: "3.0"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: give_time
+  examples: |
+    - can you tell me what time it is 
+    - tell me the time
+    - got the time 
+    - what time is it
+
+- intent: get_name
+  examples: |
+    - hey
+    - hello, my name is [Juste](name)
+    - hi, I am [Juste](name)
+    - hello there, my name is [Juste](name)
+    - My self [Juste](name)
+
+- intent: ask
+  examples: |
+    - I want to build a new website
+    - i want to create a website 
+    - bulid a new website
+    - provide a website
+
+- intent: get_email
+  examples: |
+    - [jagan.vijay.104@gmai.com](email)
+    - my email id is [akashkamalakannan@gmail.com](email)
+    - [jagan@yahoo.in](email)
+    - [jagan13456@firstc.in](email)
+
+- intent: get_number
+  examples: |
+    - [9940397899](number)
+    - [9080502226](number)
+    - my number is [994039899](number)
+
+- intent: first_name
+  examples: |
+    -[hello](first_name)
+    -[world](first_name)
+
+
