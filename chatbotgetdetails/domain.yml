@@ -1,0 +1,114 @@
+version: '2.0'
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: false
+
+intents:
+- greet
+- deny
+- contact_sale
+- goodbye
+- affirm
+- mood_great
+- mood_unhappy
+- bot_challenge
+- inform
+- get_name
+- get_number
+
+entities:
+  - person_name
+  - business_email
+  - job_function
+  - company
+  - number
+  - use_case
+
+
+forms:
+  sale_form:
+    required_slots:
+      person_name:
+      - type: from_text
+        entity: person_name
+        
+      business_email:
+      - type: from_text
+        entity: business_email
+        
+      number:
+      - type: from_text
+        entity: number
+        intent: get_number
+      company:
+      - type: from_text
+        entity: company
+        
+           
+      job_function:
+      - type: from_text
+        entity: job_function
+               
+      use_case:
+      - type: from_text
+        entity: use_case
+        
+        
+
+slots:
+  person_name:
+    type: text
+    influence_conversation: false
+  job_function:
+    type: text
+    influence_conversation: false
+  number:
+    type: text
+    influence_conversation: false
+  company:
+    type: text
+    influence_conversation: false
+  business_email:
+    type: text
+    influence_conversation: false
+  use_case:
+    type: text
+    influence_conversation: false
+
+responses:
+  utter_greet:
+  - text: Hey! what can i help you?
+  utter_cheer_up:
+  - text: 'Here is something to cheer you up:'
+    image: https://i.imgur.com/nGF1K8f.jpg
+  utter_did_that_help:
+  - text: Did that help you?
+  utter_happy:
+  - text: Great, carry on!
+  utter_goodbye:
+  - text: Bye
+  utter_iamabot:
+  - text: I am a bot, powered by Rasa.
+  utter_ask_business_email:
+  - text: "So {person_name} What is your business email?"
+  utter_ask_company:
+  - text: What company do you work for?
+  utter_ask_number:
+  - text: What is your business phone number?
+  utter_ask_job_function:
+  - text: "Whats your job?"
+  utter_ask_person_name:
+  - text: "Ok, you need to provide your details \nWhat is your name?"
+  utter_ask_use_case:
+  - text: Whats your use case? 
+  utter_submit:
+  - text: Ok. Thanks!
+  utter_slots_values:
+  - text: "Your detials: \n Name: {person_name} \n Email id: {business_email} \n Phone number: {number} \n Company name: {company} \n Your job: {job_function}\n Use case: {use_case}"
+
+actions:
+- utter_greet
+- utter_slots_values
+- utter_submit
+- action_ask_get_detials
+- action_show_time

@@ -1,0 +1,62 @@
+<head>
+    <link rel="stylesheet" href="float.css"/>
+    <link rel="stylesheet" href="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.css" />
+
+<style>
+       
+        button{
+           
+            position:fixed;
+            margin-top: 40%;
+            margin-right: 2%;
+            margin-left: 1260px;
+		visible:flase
+        }
+        img{
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+  </head>
+
+  <body>
+	
+<p id ="room"></p>	
+	
+    
+
+
+
+<div class="chat-container"></div>
+  
+    <script src="https://npm-scalableminds.s3.eu-central-1.amazonaws.com/@scalableminds/chatroom@master/dist/Chatroom.js"/></script>
+	
+    <script type="text/javascript">
+	
+function chat(){
+      var chatroom = new window.Chatroom({
+        host: "http://localhost:5005",
+        title: "Chat FirstC team",
+        container: document.querySelector(".chat-container"),
+        welcomeMessage: "Hi, I am chatbot. How may I help you?",
+        speechRecognition: "en-US",
+        voiceLang: "en-US"
+      });
+      
+
+ document.getElementById('room').innerHtml=chatroom.openChat();
+
+}
+
+
+    </script>
+<button onclick="chat()">
+<img src="./livechat.jpg" />
+    </button>
+
+
+	
+
+
+	
+  </body>
